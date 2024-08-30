@@ -1,0 +1,96 @@
+
+*{
+    font-weight: bold;
+}
+.text{
+    font-weight: normal;
+}
+
+/* navbar BG */
+.nav-bg{
+    background-color: #B43F3F;
+}
+/* nav font */
+.navfont{
+    color: #A02334;
+}
+.navfont2{
+    color: #FFDE4D;
+}
+/* .navfont2:hover{
+    color : #96CEB4;
+} */
+    
+
+.main-bg{
+    background-color: #A02334 ;
+}
+
+/* description box bg */
+.des-bg{
+    background-color: #FFDA76 ;
+}
+
+/* price bg */
+.price-bg{
+    background-color:#FFDA76;
+}
+
+/* + - box BG */
+.add-bg{
+    background-color: #96CEB4;
+}
+
+/* Added items price BG */
+.total-bg{
+    background-color: #FFDA76;
+}
+
+/* cart box general bg */
+.cart-bg{
+    background-color: #F6E96B;
+}
+
+/* cart border bottom */
+.cartBorderBottom{
+    border-bottom: solid rgba(0, 0, 0, 0.176);
+}
+
+/* coupon BG */
+.coupon-bg{
+    background-color: #FFDE4D;
+}
+
+
+.fixed-element {
+    position: fixed !important;
+    top: 14rem;
+    right: 6.5%;
+ 
+}
+.fixed-element-1 {
+    position: fixed !important;
+    top: 1rem;
+    right: 4.5%;
+
+}
+.fixed-element-2 {
+    position: fixed !important;
+    top: 29rem;
+    right: 5.5%;
+
+}
+
+.fixed-element-3 {
+    /* position: fixed !important;
+    top: 1rem;
+    right: 4.5%; */
+
+    
+    position: sticky;
+    top: 4rem; 
+    z-index: 10; 
+    overflow: hidden; 
+    height: 100vh;
+    right: 1.5%;
+}

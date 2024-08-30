@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>Add2Cart
+    </title>
+</head>
+<body class="main-bg">
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary sticky-top navfont " data-bs-theme="dark">
+    <div class="container-fluid  navfont2">
+      <a class="navbar-brand navbar text-warning"  href="#">Hungry Shark</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active text-warning"  aria-current="page" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning"   href="#">TAKEWAY</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              DINE-IN
+            </a>
+            <ul class="dropdown-menu text-warning">
+              <li><a class="dropdown-item lead navfont2" href="#">Action</a></li>
+              <li><a class="dropdown-item lead navfont2" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider lead navfont2" ></li>
+              <li><a class="dropdown-item text-warning" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 bg-warning" type="search">
+          <button class="btn btn-outline-danger text-warning" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- Nav Bar ends -->
+
+
+
+    <div class="container-fluid mt-3 ">
+        <div class="row">
+            <!-- Products Column -->
+            <div class="col-lg-9 d-flex flex-row flex-wrap justify-content-center align-items-center align-content-center 
+                        gap-3 ps-4">
+
+
+              <!-- card 1 Starts -->
+                 <div class="card" style="width: 18rem;">
+                    <img src="/assets/burger-1.jpg" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+                    <div class="card-body des-bg">
+                      <h5 class="card-title">Chicken Burger</h5>
+                      <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg ">
+                      <li class="list-group-item price-bg" >Size : 10'</li>
+                      <li class="list-group-item price-bg">Price : 120$</li>
+                    </ul>
+                    <div class="card-body d-flex flex-row align-items-center add-bg " >
+                      <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-1', 'count-1', 120)">+</button>
+                      <div class="form-control w-100 text-center" id="count-1" >0 </div>
+                      <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-1','count-1', 120)">-</button>
+                    </div>
+                    <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg ">
+                      <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+                      <li class="list-group-item price-box total-bg">$ <span id="priceBox-1">00</span></li>
+                    </ul>
+                    
+                 </div>
+              <!-- Cards 1 Ends -->
+
+                    <!-- card 2 Starts -->
+                    <div class="card" style="width: 18rem;">
+                      <img src="/assets/subsand-1.jpeg" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+                      <div class="card-body des-bg">
+                        <h5 class="card-title">Sub Sandwich</h5>
+                        <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                      <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg">
+                        <li class="list-group-item price-bg" >Size : 10'</li>
+                        <li class="list-group-item price-bg">Price : 100$</li>
+                      </ul>
+                      <div class="card-body d-flex align-items-stretch add-bg" >
+                        <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-2','count-2', 100)">+</button>
+                        <div class="form-control w-100 text-center" id="count-2" >0 </div>
+                        <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-2','count-2', 100)">-</button>
+                      </div>
+                      <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg">
+                        <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+                        <li class="list-group-item price-box total-bg">$ <span id="priceBox-2">00</span></li>
+                      </ul>
+                      
+                   </div>
+                <!-- Cards 2 Ends -->
+
+                      <!-- card 3 Starts -->
+                      <div class="card" style="width: 18rem;">
+                        <img src="/assets/pizza-1.jpg" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+                        <div class="card-body des-bg">
+                          <h5 class="card-title">Pizza</h5>
+                          <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg">
+                          <li class="list-group-item price-bg" >Size : 10'</li>
+                          <li class="list-group-item price-bg">Price : 220$</li>
+                        </ul>
+                        <div class="card-body d-flex align-items-stretch add-bg" >
+                          <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-3','count-3', 220)">+</button>
+                          <div class="form-control w-100 text-center" id="count-3" >0 </div>
+                          <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-3','count-3', 220)">-</button>
+                        </div>
+                        <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg">
+                          <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+                          <li class="list-group-item price-box total-bg">$ <span id="priceBox-3">00</span></li>
+                        </ul>
+                        
+                     </div>
+                  <!-- Cards 3 Ends -->
+
+                  <!-- card 4 Starts -->
+                      <div class="card" style="width: 18rem;">
+                        <img src="assets/sandwich-1.jpeg" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+                        <div class="card-body des-bg">
+                          <h5 class="card-title">Sandwich</h5>
+                          <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg">
+                          <li class="list-group-item price-bg" >Size : 10'</li>
+                          <li class="list-group-item price-bg">Price : 100$</li>
+                        </ul>
+                        <div class="card-body d-flex align-items-stretch add-bg" >
+                          <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-4','count-4', 100)">+</button>
+                          <div class="form-control w-100 text-center" id="count-4" >0 </div>
+                          <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-4','count-4', 100)">-</button>
+                        </div>
+                        <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg">
+                          <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+                          <li class="list-group-item price-box total-bg">$ <span id="priceBox-4">00</span></li>
+                        </ul>
+                        
+                     </div>
+                  <!-- Cards 4 Ends -->
+
+                  <!-- card 5 Starts -->
+                  <div class="card" style="width: 18rem;">
+                    <img src="assets/burger-2.webp" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+                    <div class="card-body des-bg">
+                      <h5 class="card-title">Ham Burger</h5>
+                      <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg">
+                      <li class="list-group-item price-bg" >Size : 10'</li>
+                      <li class="list-group-item price-bg">Price : 150$</li>
+                    </ul>
+                    <div class="card-body d-flex align-items-stretch add-bg" >
+                      <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-5','count-5', 150)">+</button>
+                      <div class="form-control w-100 text-center" id="count-5" >0 </div>
+                      <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-5','count-5', 150)">-</button>
+                    </div>
+                    <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg">
+                      <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+                      <li class="list-group-item price-box total-bg">$ <span id="priceBox-5">00</span></li>
+                    </ul>
+                    
+                 </div>
+              <!-- Cards 5 Ends -->
+
+              <!-- card 6 Starts -->
+              <div class="card" style="width: 18rem;">
+                <img src="assets/hot-dog-1.webp" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+                <div class="card-body des-bg">
+                  <h5 class="card-title">Hot Dog</h5>
+                  <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg">
+                  <li class="list-group-item price-bg" >Size : 10'</li>
+                  <li class="list-group-item price-bg">Price : 80$</li>
+                </ul>
+                <div class="card-body d-flex align-items-stretch add-bg" >
+                  <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-6','count-6', 80)">+</button>
+                  <div class="form-control w-100 text-center" id="count-6" >0 </div>
+                  <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-6','count-6', 80)">-</button>
+                </div>
+                <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg">
+                  <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+                  <li class="list-group-item price-box total-bg">$ <span id="priceBox-6">00</span></li>
+                </ul>
+                
+             </div>
+          <!-- Cards 6 Ends -->
+
+          <!-- card 7 Starts -->
+          <div class="card" style="width: 18rem;">
+            <img src="assets/fried-rice-1.jpg" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+            <div class="card-body des-bg">
+              <h5 class="card-title">Fried Rice</h5>
+              <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg">
+              <li class="list-group-item price-bg" >Size : Full</li>
+              <li class="list-group-item price-bg">Price : 200$</li>
+            </ul>
+            <div class="card-body d-flex align-items-stretch add-bg" >
+              <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-7','count-7', 200)">+</button>
+              <div class="form-control w-100 text-center" id="count-7" >0 </div>
+              <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-7','count-7', 200)">-</button>
+            </div>
+            <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg">
+              <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+              <li class="list-group-item price-box total-bg">$ <span id="priceBox-7">00</span></li>
+            </ul>
+            
+         </div>
+          <!-- Cards 7 Ends -->
+
+          <!-- card 8 Starts -->
+          <div class="card" style="width: 18rem;">
+            <img src="assets/chicken-fry-1.jpg" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+            <div class="card-body des-bg">
+              <h5 class="card-title">Chicken Fry (6 PCS)</h5>
+              <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg">
+              <li class="list-group-item price-bg" >Size : Bucket</li>
+              <li class="list-group-item price-bg">Price : 250$</li>
+            </ul>
+            <div class="card-body d-flex align-items-stretch add-bg" >
+              <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-8','count-8', 250)">+</button>
+              <div class="form-control w-100 text-center" id="count-8" >0 </div>
+              <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-8','count-8', 250)">-</button>
+            </div>
+            <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg">
+              <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+              <li class="list-group-item price-box total-bg">$ <span id="priceBox-8">00</span></li>
+            </ul>
+            
+         </div>
+        <!-- Cards 8 Ends -->
+
+        <!-- card 9 Starts -->
+        <div class="card" style="width: 18rem;">
+          <img src="assets/ramen-1.webp" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+          <div class="card-body des-bg">
+            <h5 class="card-title">Ramen</h5>
+            <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg">
+            <li class="list-group-item price-bg" >Size : Big Bowl</li>
+            <li class="list-group-item price-bg">Price : 200$</li>
+          </ul>
+          <div class="card-body d-flex align-items-stretch add-bg" >
+            <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-9','count-9', 200)">+</button>
+            <div class="form-control w-100 text-center" id="count-9" >0 </div>
+            <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-9','count-9', 200)">-</button>
+          </div>
+          <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg">
+            <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+            <li class="list-group-item price-box total-bg">$ <span id="priceBox-9">00</span></li>
+          </ul>
+          
+       </div>
+      <!-- Cards 9 Ends -->
+
+      <!-- card 10 Starts -->
+      <div class="card" style="width: 18rem;">
+        <img src="/assets/Meat-balls-1.jpg" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+        <div class="card-body des-bg">
+          <h5 class="card-title">Meat Balls</h5>
+          <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg">
+          <li class="list-group-item price-bg" >Size : 12 PCS</li>
+          <li class="list-group-item price-bg">Price : 100$</li>
+        </ul>
+        <div class="card-body d-flex align-items-stretch add-bg" >
+          <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-10','count-10', 100)">+</button>
+          <div class="form-control w-100 text-center" id="count-10" >0 </div>
+          <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-10','count-10', 100)">-</button>
+        </div>
+        <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg">
+          <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+          <li class="list-group-item price-box total-bg">$ <span id="priceBox-10">00</span></li>
+        </ul>
+        
+      </div>
+      <!-- Cards 10 Ends -->
+
+      
+                  <!-- card 11 Starts -->
+                  <div class="card" style="width: 18rem;">
+                    <img src="/assets/pasta-1.jpg" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+                    <div class="card-body des-bg">
+                      <h5 class="card-title">Pasta</h5>
+                      <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's
+                        content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg">
+                      <li class="list-group-item price-bg">Size : 1 Bowl</li>
+                      <li class="list-group-item price-bg">Price : 100$</li>
+                    </ul>
+                    <div class="card-body d-flex align-items-stretch add-bg">
+                      <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-11','count-11', 100)">+</button>
+                      <div class="form-control w-100 text-center" id="count-11">0 </div>
+                      <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-11','count-11', 100)">-</button>
+                    </div>
+                    <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg">
+                      <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+                      <li class="list-group-item price-box total-bg">$ <span id="priceBox-11">00</span></li>
+                    </ul>
+                  
+                  </div>
+                  <!-- Cards 11 Ends -->
+
+                  <!-- card 12 Starts -->
+                  <div class="card" style="width: 18rem;">
+                    <img src="/assets/taco-1.webp" class="card-img-top" style="height: 12.5rem; object-fit: cover;" alt="burger">
+                    <div class="card-body des-bg">
+                      <h5 class="card-title">Taco</h5>
+                      <p class="card-text text">Some quick example text to build on the card title and make up the bulk of the card's
+                        content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush d-flex flex-row justify-content-around price-bg">
+                      <li class="list-group-item price-bg">Size : 8'</li>
+                      <li class="list-group-item price-bg">Price : 120$</li>
+                    </ul>
+                    <div class="card-body d-flex align-items-stretch add-bg">
+                      <button class="btn btn-success w-100 me-2" onclick="priceAdd('priceBox-12','count-12', 120)">+</button>
+                      <div class="form-control w-100 text-center" id="count-12">0 </div>
+                      <button class="btn btn-danger w-100 ms-2" onclick="priceSub('priceBox-12','count-12', 120)">-</button>
+                    </div>
+                    <ul class="list-group list-group-flush d-flex flex-row justify-content-around total-bg">
+                      <li class="list-group-item total-bg" style="border: 0;">Your Items : </li>
+                      <li class="list-group-item price-box total-bg">$ <span id="priceBox-12">00</span></li>
+                    </ul>
+                  
+                  </div>
+                  <!-- Cards 12 Ends -->
+        
+
+            </div>
+            <!-- product Column ends -->
+
+
+
+
+            <!-- Cart Column -->
+            <div class="col-lg-3 container d-flex flex-wrap flex-col justify-content-center mx-lg-0 mx-auto gap-4 fixed-element-3 sticky-top" style="object-fit: cover;  height: fit-content;">
+
+              <!-- Cart Starts -->
+                <div class="card  text-center cart-box" style="width: 20rem;">
+                  <div class="card-header h3 add-bg"> Pricing Counter</div>
+                    <ul class="list-group list-group-flush text-start  cart-bg">
+                      <div class="list-group-item cart-bg cartBorderBottom " >Item(s) Price : $ <span id="cartAdd">00</span></div>
+                      <div class="list-group-item cart-bg cartBorderBottom">Delivery charge : $ <span id="dchar">00</span></div>
+                      <div class="list-group-item cart-bg cartBorderBottom">Coupon Discount : - $ <span id="cDis">00</span></div>
+                      <li class="list-group-item cart-bg cartBorderBottom">Total Bill : $ <span id="totalB">00</span></li>
+                    </ul>
+                  <div class=" btn btn-success">Check Out (<span id="Out">0</span>)</div>
+                </div>
+
+              <!-- Offer box -->
+                <div class="card  coupon-bg " style="width: 20rem;">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Special Offer!</h5>
+                    <p class="card-text text-center">Buy Any 5 to Avail $50 Coupon!</p>
+                    <p class="lead text-center">Coupon: Hungry50</p>
+                  </div>
+                </div>
+
+              <!-- coupon Apply -->
+              <div class="card w-90 coupon-bg " style="width: 20rem; visibility: hidden;" id="coupon-box">
+                <div class="card-body">
+                  <h5 class="card-title">Enter Your Coupon:</h5>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="coup" placeholder="Your Coupon">
+                    <button class="btn btn-primary" onclick="cApply()">Apply</button>
+                  </div>
+                  
+                </div>
+              </div>
+            
+            </div>
+            <!-- Cart Column Ends -->
+            
+        </div>
+        <!--  -->
+        
+    </div>  
+    <!-- col container ends -->
+
+    <!-- Footer starts -->
+    <footer class="bg-dark text-white text-center mt-4 py-2 navfont2">
+      <div class="container-fluid">
+        <div class="lead m-2 navfont2">&copy; Created On testing Purpose. All rights reserved.</div>
+        <div class="lead m-2 navfont2 text-danger">khshourav@gmail.com</div>
+        <ul class="list-inline ">
+          <li class="list-inline-item lead"><a href="#" class="navfont2">Privacy Policy</a></li>
+          <li class="list-inline-item lead"><a href="#" class="navfont2">Terms of Service</a></li>
+          <li class="list-inline-item lead"><a href="#" class="navfont2">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+</body>
+</html>
